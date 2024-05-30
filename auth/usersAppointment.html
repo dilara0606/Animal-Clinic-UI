@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Welcome</title>
+    <link rel="icon" type="image/x-icon" href="/favicon2.ico" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./usersAppointment.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  </head>
+
+  <body>
+    <nav class="header">
+      <h4 class="nav-title">Animal Clinic</h4>
+      <div class="nav-links">
+          <input type="text" id="search-box" class="search-box" placeholder="Search...">
+          <button type="button" id="search-button" class="search-button" title="Search"><i class="fas fa-search"></i></button>
+          <a href="userHomepage.html" class="nav-link button">
+              <i class="fa-solid fa-house"></i> Home
+          </a>
+          <a href="usersAppointment.html" class="nav-link button">
+              <i class="fas fa-calendar-alt"></i> Appointments
+          </a>
+          <a href="posts.html" class="nav-link button">
+              <i class="fa-brands fa-instagram"></i> Profile
+          </a>
+      </div>
+  </nav>
+    
+  <div id="search-results" class="search-results" style="display: none;"></div>
+
+    <div class="date-container" id="date-container"><h2>Calender</h2>
+      <div id="calendar">
+        <div id="calendar-header">
+          <button id="prev-month">&lt;</button>
+          <span id="month-year"></span>
+          <button id="next-month">&gt;</button>
+        </div>
+        <div id="calendar-body"></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <img src="./bg2.png" class="bg1" alt="" />
+      </div>
+
+      <div class="create-appointment-container">
+        <h2><i class="fas fa-calendar-alt"></i> Create Appointment</h2>
+        <div class="create-appointment">
+            <form id="appointment-form">
+                <label for="appointment-date"><i class="far fa-calendar"></i> Select Date:</label>
+                <input type="date" id="appointment-date" class="appointment-date" name="date" required>
+                <br>
+                <label for="doctor-select"><i class="fas fa-user-md"></i> Select Doctor:</label>
+                <select id="doctor-select" name="doctor" class="doctor-select" required>
+                </select>
+                <button type="submit" id="create-appointment-button" class="create-appointment-button" title="Create Appointment"><i class="fas fa-calendar-plus"></i> Create</button>
+            </form>
+        </div>
+    </div>    
+
+      <div class="appointments-header">
+        <div class="appointment-header"><h3>Next</h3></div>
+        <div class="appointment-header"><h3>Last</h3></div>
+      </div>
+
+      <div class="appointments-container">
+        <div class="appointment-container" id="appointment-container"></div>
+        <div class="last-appointment-container" id="last-appointment-container"></div>    
+      </div>
+      
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="./usersAppointment.js"></script>
+  </body>
+</html>

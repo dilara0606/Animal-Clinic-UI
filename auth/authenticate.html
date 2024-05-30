@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <section>
+
+        <div class="leaves">
+            <div class="set">
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+                <div><img src="pati.png" alt="pati"></div>
+            </div>
+        </div>
+        <img src="bg.jpg" class="bg" alt="bg">
+        <div class="login">
+            <h2>Sign In</h2>
+            <div class="inputBox">
+                <input type="email" placeholder="Email" id="mail" >
+                <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password" id="password" >
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login" id="btn" >
+            </div>
+            <span class="error-message" id="general-error"></span>
+            <div class="group">
+                <a href="#">Forget Password</a>
+                <a href="#" id="signup">Signup</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="authenticate.js"></script>
+
+</body>
+</html>

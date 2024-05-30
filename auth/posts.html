@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Profile</title>
+    <link rel="icon" type="image/x-icon" href="/favicon2.ico" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  </head>
+
+  <body>
+    <nav class="header">
+      <h4 class="nav-title">Animal Clinic</h4>
+      <div class="nav-links">
+          <input type="text" id="search-box" class="search-box" placeholder="Search User">
+          <button type="button" id="search-button" class="search-button" title="Search"><i class="fas fa-search"></i></button>
+          <a href="userHomepage.html" class="nav-link button">
+              <i class="fa-solid fa-house"></i> Home
+          </a>
+          <a href="usersAppointment.html" class="nav-link button">
+              <i class="fas fa-calendar-alt"></i> Appointments
+          </a>
+          <a href="posts.html" class="nav-link button">
+              <i class="fa-brands fa-instagram"></i> Profile
+          </a>
+      </div>
+  </nav>
+
+  <div id="search-results" class="search-results" style="display: none;"></div>
+
+  <div class="user-container"><h2>Create Post</h2>
+
+    </div>
+
+    <section>
+      <div class="container">
+        <img src="./bg2.png" class="bg1" alt="" />
+      </div>
+
+      <div class="post-container" id="post-container">
+    </div>
+
+    <div class="heart-animation" id="heart-animation">
+    </div>
+
+    <div class="comment-section" id="comment-section" data-post-id="${post.id}">
+    </div>
+
+    <div class="create-appointment-container" id="create-post">
+        <div class="create-appointment">
+          <form id="appointment-form">
+            <h2>Create Post</h2>
+            
+            <div class="form-actions">
+              <div class="image-upload">
+                <label for="file-input">
+                  <i class="fas fa-upload"></i> Select Image
+                </label>
+                <input id="file-input" type="file" accept="image/*" style="display:none;" />
+              </div>
+              
+              <div id="image-preview" style="display: none;">
+                <img id="preview-img" src="" alt="Image Preview" />
+              </div>
+              
+              <button type="button" id="create-appointment-button" class="create-appointment-button" style="display: none;">
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+      <div id="modal" class="overlay" style="display: none;">
+        <div class="post-details">
+          <button class="close-button" id="close-button">&times;</button>
+          <h2 style="color:white">Post Details</h2>
+          <div class="post-image-container">
+            <img id="modal-img" src="" alt="Full Image" class="post-image"/>
+          </div>
+          <input type="text" placeholder="Enter Title" id="title" class="post-input"/>
+          <textarea placeholder="Enter Description" id="description" class="post-input"></textarea>
+          <button id="save-post" class="post-input">Save Post</button>
+        </div>
+      </div>
+      
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="./posts.js"></script>
+  </body>
+</html>
